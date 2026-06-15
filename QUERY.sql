@@ -131,3 +131,15 @@ select
 from matches
 where tournament_category = 'Champions League'
 and match_status = 'Available';
+
+
+
+-- QUERY -- 02
+
+select
+    user_id,
+    full_name,
+    email
+from users
+where full_name ilike 'Tanvir%'
+or full_name ilike '%Haque%';
