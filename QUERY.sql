@@ -64,7 +64,6 @@ create table bookings (
             'Confirmed',
             'Cancelled',
             'Refunded'
-        )
-        or payment_status is null
+        ) 
     )
 );
