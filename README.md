@@ -162,18 +162,6 @@ The ERD includes:
 
 ---
 
-## Sample Data
-
-The database contains sample records for:
-
-* 4 Users
-* 5 Matches
-* 5 Bookings
-
-for testing and query execution.
-
----
-
 ## Author
 
 Imran Hossain
