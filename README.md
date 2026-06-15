@@ -178,6 +178,6 @@ for testing and query execution.
 
 Imran Hossain
 
-Database Design & SQL Assignment
+Database Design & SQL 
 
 PostgreSQL Essentials
