@@ -170,3 +170,14 @@ inner join users u
 on b.user_id = u.user_id
 inner join matches m
 on b.match_id = m.match_id;
+
+
+-- QUERY -- 05
+
+select
+    u.user_id,
+    u.full_name,
+    b.booking_id
+from users u
+left join bookings b
+on u.user_id = b.user_id;
