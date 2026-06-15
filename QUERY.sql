@@ -195,3 +195,15 @@ where total_cost >
     select avg(total_cost)
     from bookings
 );
+
+
+-- QUERY -- 07
+
+select
+    match_id,
+    fixture,
+    round(base_ticket_price) as base_ticket_price
+from matches
+order by base_ticket_price desc
+limit 2
+offset 1;
