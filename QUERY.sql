@@ -156,3 +156,17 @@ select
         as systematic_status
 from bookings
 where payment_status is null;
+
+
+-- QUERY -- 04
+
+select
+    b.booking_id,
+    u.full_name,
+    m.fixture,
+    round(b.total_cost) as total_cost
+from bookings b
+inner join users u
+on b.user_id = u.user_id
+inner join matches m
+on b.match_id = m.match_id;
