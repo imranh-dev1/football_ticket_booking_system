@@ -143,3 +143,16 @@ select
 from users
 where full_name ilike 'Tanvir%'
 or full_name ilike '%Haque%';
+
+
+
+-- QUERY -- 03
+
+select
+    booking_id,
+    user_id,
+    match_id,
+    coalesce(payment_status, 'Action Required')
+        as systematic_status
+from bookings
+where payment_status is null;
