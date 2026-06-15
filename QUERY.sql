@@ -38,3 +38,33 @@ create table matches (
         )
     )
 );
+
+
+-- BOOKINGS TABLE
+
+create table bookings (
+    booking_id int primary key,
+    user_id int not null,
+    match_id int not null,
+    seat_number varchar(20),
+    payment_status varchar(20),
+    total_cost decimal(10,2) not null,
+
+    foreign key (user_id)
+        references users(user_id),
+
+    foreign key (match_id)
+        references matches(match_id),
+
+    check (total_cost >= 0),
+
+    check (
+        payment_status in (
+            'Pending',
+            'Confirmed',
+            'Cancelled',
+            'Refunded'
+        )
+        or payment_status is null
+    )
+);
