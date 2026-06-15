@@ -15,3 +15,26 @@ create table users (
     check (role in ('Football Fan', 'Ticket Manager'))
 );
 
+
+
+-- MATCHES TABLE
+
+create table matches (
+    match_id int primary key,
+    fixture varchar(150) not null,
+    tournament_category varchar(100) not null,
+    base_ticket_price decimal(10,2) not null,
+
+    match_status varchar(20) not null,
+
+    check (base_ticket_price >= 0),
+
+    check (
+        match_status in (
+            'Available',
+            'Selling Fast',
+            'Sold Out',
+            'Postponed'
+        )
+    )
+);
